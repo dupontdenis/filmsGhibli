@@ -15,12 +15,12 @@ app.get('/films', async(req, res) => {
         const {data:films} = await axios.get('https://ghibliapi.herokuapp.com/films');
       
         debug(films.length);
-        res.render('index', { films, nb:5 });
+        res.render('index', { films, nb:100 });
 
       } catch (error) {
         console.error(error);
       }
 
 });
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
