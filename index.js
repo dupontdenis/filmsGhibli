@@ -12,7 +12,7 @@ app.set('view engine', 'pug');
 app.get('/films', async(req, res) => {
 
     try {
-        const {data:films} = await axios.get('https://ghibliapi.herokuapp.com/films');
+        const {data:films} = await axios.get('https://ghibliapi.vercel.app/films');
       
         debug(films.length);
         res.render('index', { films, nb:100 });
