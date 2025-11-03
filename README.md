@@ -5,7 +5,7 @@ Browse Studio Ghibli films fetched from the public Ghibli API and rendered serve
 ### What this app does
 
 - Starts an Express server (default on port 8080)
-- Calls the Studio Ghibli API at https://ghibliapi.vercel.app/films
+- Calls the Studio Ghibli API at https://ghibliapi.dev/films
 - Renders the first 100 films as responsive cards via Pug templates
 - Uses Bootstrap for styling plus a custom `public/style.css`
 
@@ -80,7 +80,7 @@ Then open:
 
 ## How it works
 
-1. `GET /films` route fetches films from `https://ghibliapi.vercel.app/films` using Axios.
+1. `GET /films` route fetches films from `https://ghibliapi.dev/films` using Axios.
 2. The response (array of film objects) is passed to the `views/index.pug` template along with `nb=100` to limit the number shown.
 3. `index.pug` uses the `thumbCard` mixin to render each film's image, title, director, and a link to the film detail API URL.
 4. Layout and scripts are provided via `views/layout.pug` using Bootstrap CDN assets.
@@ -117,7 +117,7 @@ DEBUG=films node index.js
 
 ## Credits
 
-- Studio Ghibli API: https://ghibliapi.vercel.app/
+- Studio Ghibli API: https://ghibliapi.dev/
 - Bootstrap Album example for layout inspiration
 
 ---
